@@ -6,6 +6,7 @@
 // Caracteristicas:
 // 1. Conexión Websocket sobre nodejs
 // 2. Ahora habitaciones <rooms>; se trata de una aplicacion sencilla!
+// Version: 0.0.1
 
 var fs = require('fs');
 

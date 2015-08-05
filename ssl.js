@@ -7,6 +7,7 @@
 // 1. Conexión Websocket sobre nodejs
 // 2. WebSocket channels, es decir rooms
 // 3. SSL WebSocket es decir, la conexión wss://localhost:8080/
+// Version: 0.0.1
 
 var fs = require('fs');
 

@@ -6,6 +6,7 @@
 // Caracteristicas:
 // 1. Conexión Websocket sobre nodejs
 // 2. WebSocket channels, es decir rooms
+// Version: 0.0.1
 
 var fs = require('fs');
 
