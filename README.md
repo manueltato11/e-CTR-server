@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### [WebSocket over Node.js](https://github.com/muaz-khan/WebRTC-Experiment/blob/master/websocket-over-nodejs) / [Demo](https://www.webrtc-experiment.com/websocket/) [![npm](https://img.shields.io/npm/v/websocket-over-nodejs.svg)](https://npmjs.org/package/websocket-over-nodejs) [![downloads](https://img.shields.io/npm/dm/websocket-over-nodejs.svg)](https://npmjs.org/package/websocket-over-nodejs)
 
 This repository has following kinds of browser-based demos:
@@ -324,3 +325,7 @@ https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md
 #### License
 
 [WebSocket over Node.js](https://github.com/muaz-khan/WebRTC-Experiment/blob/master/websocket-over-nodejs) is released under [MIT licence](https://webrtc-experiment.appspot.com/licence/) . Copyright (c) [Muaz Khan](https://plus.google.com/+MuazKhan).
+=======
+# e-CTR-server
+Server del Plugin e-CTR "Comunicación en Tiempo Real" desarrollado en WebSockets Over Node.js
+>>>>>>> 39b4ad6f59f09cc0cab11a5d520baf8ff9334021
