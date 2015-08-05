@@ -63,7 +63,7 @@ Primero que todo; cambiar **subdominio** en el archivo `package.json`:
     "start": "signaler.js"
   },
   main: "signaler.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "node": "0.10.x"
   },
@@ -96,4 +96,4 @@ https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md
 
 #### Licencia
 
-[WebSocket over Node.js](https://github.com/muaz-khan/WebRTC-Experiment/blob/master/websocket-over-nodejs) esta publicado bajo la [Licencia MIT](https://webrtc-experiment.appspot.com/licence/) . Copyright (c) [Muaz Khan](https://plus.google.com/+MuazKhan).
+[WebSocket over Node.js](https://github.com/muaz-khan/WebRTC-Experiment/blob/master/websocket-over-nodejs) esta publicado bajo la [Licencia MIT](https://webrtc-experiment.appspot.com/licence/)  Copyright (c) [Muaz Khan](https://plus.google.com/+MuazKhan).
