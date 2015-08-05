@@ -1,12 +1,11 @@
-// https://www.webrtc-experiment.com/
 
-// Dependencies:
+// Dependencias:
 // 1. WebSocket
 // 2. Node-Static
 
-// Features:
-// 1. WebSocket over Nodejs connection
-// 2. Now rooms; it is a simple implementation!
+// Caracteristicas:
+// 1. Conexión Websocket sobre nodejs
+// 2. Ahora habitaciones <rooms>; se trata de una aplicacion sencilla!
 
 var fs = require('fs');
 
@@ -27,7 +26,7 @@ new WebSocketServer({
     autoAcceptConnections: false
 }).on('request', onRequest);
 
-// shared stuff
+// Material compartido
 
 var clients = [];
 
@@ -67,6 +66,6 @@ function removeUser(websocket) {
     clients = newClientsArray;
 }
 
-app.listen(12034);
+app.listen(8080);
 
-console.log('Please open NON-SSL URL: http://localhost:12034/');
+console.log('Por favor, abra la URL NON-SSL: http://localhost:8080/');

@@ -1,12 +1,11 @@
-// https://www.webrtc-experiment.com/
 
-// Dependencies:
+// Dependencias:
 // 1. WebSocket
 // 2. Node-Static
 
-// Features:
-// 1. WebSocket over Nodejs connection
-// 2. WebSocket channels i.e. rooms
+// Caracteristicas:
+// 1. Conexión Websocket sobre nodejs
+// 2. WebSocket channels, es decir rooms
 
 var fs = require('fs');
 
@@ -27,7 +26,7 @@ new WebSocketServer({
     autoAcceptConnections: false
 }).on('request', onRequest);
 
-// shared stuff
+// Material compartido
 
 var CHANNELS = { };
 
@@ -69,7 +68,7 @@ function sendMessage(message, websocket) {
     message.data = JSON.stringify(message.data);
     var channel = CHANNELS[message.channel];
     if (!channel) {
-        console.error('no such channel exists');
+        console.error('no existe tal canal <channel>');
         return;
     }
 
@@ -112,6 +111,6 @@ function truncateChannels(websocket) {
     }
 }
 
-app.listen(12034);
+app.listen(8080);
 
-console.log('Please open NON-SSL URL: http://localhost:12034/');
+console.log('Por favor, abra la URL NON-SSL: http://localhost:8080/');

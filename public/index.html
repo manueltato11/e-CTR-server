@@ -1,14 +1,15 @@
-﻿<!-- Make sure that you executed "signaler.js" or "ssl.js" instead of "simple.js"!! -->
+﻿<!-- Asegúrese de que ejecutó "signaler.js" o "ssl.js" en lugar de "simple.js"!! -->
 
 <!--
-> Muaz Khan     - https://github.com/muaz-khan 
-> MIT License   - https://www.webrtc-experiment.com/licence/
-> Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/websocket
+> Manuel Fernando   - https://github.com/manueltato11 
+> Muaz Khan         - https://github.com/muaz-khan
+> MIT License       - https://www.webrtc-experiment.com/licence/
+> Documentation     - https://www.webrtc-experiment.com/
 -->
 
-<title>Simple Text-Chat using WebSockets over Node.js ® Muaz Khan</title>
+<title>e-CTR-Server - WebSockets over Node.js Corriendo!</title>
 
-<h1 style="border-bottom: 1px solid #CCCCCC; display: block; font-size: 2em; margin-bottom: 0em; padding: .6em 0; text-align: center;">Simple Text-Chat using <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/websocket-over-nodejs" target="_blank">WebSockets over Node.js</a></h1>
+<h1 style="border-bottom: 1px solid #CCCCCC; display: block; font-size: 2em; margin-bottom: 0em; padding: .6em 0; text-align: center;">Servidor e-CTR-Server <a href="https://github.com/manueltato11/e-CTR-server" target="_blank">WebSockets over Node.js</a> se esta ejecutando correctamente!</h1>
 
 <style>
     * {
@@ -74,21 +75,21 @@
 <input type="text" disabled>
 <div id="output"></div>
 <script>
-    var channelName = location.href.replace( /\/|:|#|%|\.|\[|\]/g , ''); // using URL as room-name
+    var channelName = location.href.replace( /\/|:|#|%|\.|\[|\]/g , ''); // usando URL como nombre de sala <room-name>
     // var websocket = new WebSocket('ws://wsnodejs.jit.su:80');
-    var websocket = new WebSocket('ws://' + document.domain + ':12034');
+    var websocket = new WebSocket('ws://' + document.domain + ':8080');
     websocket.onopen = function() {
         websocket.push(JSON.stringify({
             open: true,
             channel: channelName
         }));
 
-        if (!window.username) window.username = prompt('Please enter your full name') || 'Anonymous';
+        if (!window.username) window.username = prompt('Por favor ingrese su nombre') || 'Anonymous';
 
         setTimeout(function() {
             websocket.send({
                 sender: window.username,
-                message: 'is ready to share text messages with you.'
+                message: 'esta listo para compartir mensajes de texto con usted.'
             });
         }, 1000);
 
@@ -107,7 +108,7 @@
     };
 </script>
 <script>
-    // uncomment this line to use auto generated usernames!
+    // descomentar esta línea si se desea auto generar nombres de usuarios!
     // window.username = (Math.round(Math.random() * 60535) + 5000);
 
     input = document.querySelector('input[type=text]');
@@ -118,7 +119,7 @@
             message: this.value
         });
 
-        /* self preview! */
+        /* auto previsualizacion! */
         appendDIV({
             sender: window.username,
             message: this.value
@@ -140,6 +141,6 @@
         input.focus();
     }
 </script>
-<footer style="font-size: .8em; text-align: center;"> <a href="https://www.webrtc-experiment.com/" target="_blank">WebRTC Experiments!</a> © <a href="https://plus.google.com/100325991024054712503" rel="author" target="_blank">Muaz Khan</a>, <a href="mailto:muazkh@gmail.com" target="_blank">Email</a> »
-    <a href="http://twitter.com/muazkh" target="_blank">@muazkh</a>» <a href="https://github.com/muaz-khan" target="_blank">Github</a> 
+<footer style="font-size: .8em; text-align: center;"> <a href="https://github.com/manueltato11/e-CTR-server" target="_blank">e-CTR-Server!</a> © <a href="https://plus.google.com/100325991024054712503" rel="author" target="_blank">Muaz Khan</a>, <a href="https://github.com/manueltato11" target="_blank">Manuel Fernando</a> »
+    <a href="http://twitter.com/muazkh" target="_blank" title="Síguenos en Twitter">@muazkh</a>, <a href="http://twitter.com/manueltato11" target="_blank" title="Síguenos en Twitter">@manueltato11</a> 
 </footer>

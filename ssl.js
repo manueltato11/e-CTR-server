@@ -1,20 +1,19 @@
-// https://www.webrtc-experiment.com/
 
-// Dependencies:
+// Dependencias:
 // 1. WebSocket
 // 2. Node-Static
 
-// Features:
-// 1. WebSocket over Nodejs connection
-// 2. WebSocket channels i.e. rooms
-// 3. SSL websocket connection i.e. wss://localhost:12034/
+// Caracteristicas:
+// 1. Conexión Websocket sobre nodejs
+// 2. WebSocket channels, es decir rooms
+// 3. SSL WebSocket es decir, la conexión wss://localhost:8080/
 
 var fs = require('fs');
 
 var _static = require('node-static');
 var file = new _static.Server('./public');
 
-// don't forget to use your own keys!
+// no olvidemos en utilizar nuestras propias llaves!
 var options = {
     key: fs.readFileSync('fake-keys/privatekey.pem'),
     cert: fs.readFileSync('fake-keys/certificate.pem')
@@ -34,7 +33,7 @@ new WebSocketServer({
     autoAcceptConnections: false
 }).on('request', onRequest);
 
-// shared stuff
+// material compartido
 
 var CHANNELS = { };
 
@@ -76,7 +75,7 @@ function sendMessage(message, websocket) {
     message.data = JSON.stringify(message.data);
     var channel = CHANNELS[message.channel];
     if (!channel) {
-        console.error('no such channel exists');
+        console.error('no existe tal canal <channel>');
         return;
     }
 
@@ -119,6 +118,6 @@ function truncateChannels(websocket) {
     }
 }
 
-app.listen(12034);
+app.listen(8080);
 
-console.log('Please open SSL URL: https://localhost:12034/');
+console.log('Por favor, abra la URL SSL: https://localhost:8080/');

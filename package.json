@@ -1,12 +1,12 @@
 {
-  "name": "websocket-over-nodejs",
+  "name": "e-CTR-server",
   "preferGlobal": true,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": {
-    "name": "Muaz Khan",
-    "email": "muazkh@gmail.com"
+    "name": "Manuel Fernando Marulanda",
+    "email": "manueltato11@hotmail.com"
   },
-  "description": "WebSocket-over-Nodejs for WebRTC Experiments: https://www.webrtc-experiment.com",
+  "description": "e-CTR-server WebSocket-over-Nodejs para Plugin WebRTC Moodle.",
   "contributors": [
     {
       "name": "Muaz Khan",
@@ -19,9 +19,10 @@
   "main": "signaler.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muaz-khan/WebRTC-Experiment.git"
+    "url": "https://github.com/manueltato11/e-CTR-server.git"
   },
   "keywords": [
+    "e-CTR-server",
     "webrtc-signaling",
     "websocket-over-nodejs"
   ],
@@ -34,9 +35,9 @@
     "websocket": "1.0.x"
   },
   "bugs": {
-    "url": "https://github.com/muaz-khan/WebRTC-Experiment/issues"
+    "url": "https://github.com/manueltato11/e-CTR-server/issues"
   },
-  "homepage": "https://github.com/muaz-khan/WebRTC-Experiment",
+  "homepage": "https://github.com/manueltato11/e-CTR-server",
   "_id": "websocket-over-nodejs@0.0.2",
   "_from": "websocket-over-nodejs@"
 }
