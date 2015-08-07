@@ -9,20 +9,20 @@ Server del Plugin e-CTR "Comunicación en Tiempo Real" desarrollado con WebSocke
 Tres archivos node.js:
 
 1. signaler.js - HTTP basado en Websocket para la señalización de servidor junto a la creación de canales WebSocket <channels>, es decir <rooms>.
-2. ssl.js - HTTPs i.e. SSL basado en Websocket para la señalizacion mas segura de la conexion, junto a la creacion de canales Websocket <channels>, es decir <rooms>.
-3. simple.js - HTTP basado en Websocket para la señalizacion sin canales ni habitaciones, es decir NO-room.
+2. ssl.js - HTTPs i.e. SSL basado en Websocket para la señalizacion más segura de la conexión, junto a la creacion de canales Websocket <channels>, es decir <rooms>.
+3. simple.js - HTTP basado en Websocket para la señalización sin canales ni habitaciones, es decir NO-room.
 
 =
 
 #### Dependencias
 
-1. WebSocket - Para la señalizacion Websocket sobre la conexion en Node.js.
+1. WebSocket - Para la señalización Websocket sobre la conexión en Node.js.
 
 ```
 npm install websocket
 ```
 
-2. Node-Static - para servir recursos estaticos, es decir archivos HTML/CSS/JS.
+2. Node-Static - para servir recursos estáticos, es decir archivos HTML/CSS/JS.
 
 ```
 npm install node-static
@@ -42,7 +42,7 @@ Se utiliza el puerto "8080", por ejemplo: `http://localhost:8080/`
 
 =
 
-#### Verificar si el servidor esta corriendo
+#### Verificar si el servidor está corriendo
 
 ```
 // Reemplazar "localhost" con el nombre del dominio!
@@ -51,7 +51,7 @@ http://localhost:8080/
 
 =
 
-#### Al implementar la aplicacion
+#### Al implementar la aplicación
 
 Primero que todo; cambiar **subdominio** en el archivo `package.json`:
 
