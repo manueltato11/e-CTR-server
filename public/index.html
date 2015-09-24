@@ -10,7 +10,7 @@
 
 <title>e-CTR-Server - WebSockets over Node.js Corriendo!</title>
 
-<h1 style="border-bottom: 1px solid #CCCCCC; display: block; font-size: 2em; margin-bottom: 0em; padding: .6em 0; text-align: center;">Servidor e-CTR-Server <a href="https://github.com/manueltato11/e-CTR-server" target="_blank">WebSockets over Node.js</a><br><br>se esta ejecutando correctamente!...</h1>
+<h1 style="display: block; font-size: 2em; margin-bottom: 0em; padding: .6em 0; text-align: center;">Servidor  <a href="https://github.com/manueltato11/e-CTR-server" target="_blank" style="text-decoration: none;">WebSockets para Node.js</a> esta corriendo correctamente!</h1>
 
 <style>
     * {
@@ -75,73 +75,7 @@
 </style>
 <input type="text" disabled>
 <div id="output"></div>
-<script>
-    var channelName = location.href.replace( /\/|:|#|%|\.|\[|\]/g , ''); // usando URL como nombre de sala <room-name>
-    // var websocket = new WebSocket('ws://wsnodejs.jit.su:80');
-    var websocket = new WebSocket('ws://' + document.domain + ':8080');
-    websocket.onopen = function() {
-        websocket.push(JSON.stringify({
-            open: true,
-            channel: channelName
-        }));
 
-        if (!window.username) window.username = prompt('Por favor ingrese su nombre') || 'Anonymous';
-
-        setTimeout(function() {
-            websocket.send({
-                sender: window.username,
-                message: 'esta listo para compartir mensajes de texto con usted.'
-            });
-        }, 1000);
-
-        input.disabled = false;
-    };
-    websocket.push = websocket.send;
-    websocket.send = function(data) {
-        websocket.push(JSON.stringify({
-            data: data,
-            channel: channelName
-        }));
-    };
-
-    websocket.onmessage = function(e) {
-        appendDIV(JSON.parse(e.data));
-    };
-</script>
-<script>
-    // descomentar esta línea si se desea auto generar nombres de usuarios!
-    // window.username = (Math.round(Math.random() * 60535) + 5000);
-
-    input = document.querySelector('input[type=text]');
-    input.onkeypress = function(e) {
-        if (e.keyCode !== 13 || !this.value.length) return;
-        websocket.send({
-            sender: window.username,
-            message: this.value
-        });
-
-        /* auto previsualizacion! */
-        appendDIV({
-            sender: window.username,
-            message: this.value
-        });
-
-        this.value = '';
-    };
-
-    output = document.querySelector('#output');
-
-    function appendDIV(data) {
-        var div = document.createElement('div');
-        div.innerHTML = '<section class="name">' + data.sender + '</section><section class="message">' + data.message + '</section>';
-        output.insertBefore(div, output.firstChild);
-
-        div.tabIndex = 0;
-        div.focus();
-
-        input.focus();
-    }
-</script>
-<footer style="font-size: .8em; text-align: center;"> <a href="https://github.com/manueltato11/e-CTR-server" target="_blank">e-CTR-Server!</a> © <a href="https://github.com/manueltato11" target="_blank">Manuel Fernando</a> »
-    <a href="http://twitter.com/manueltato11" target="_blank" title="Síguenos en Twitter">@manueltato11</a>, <a href="https://plus.google.com/100325991024054712503" rel="author" target="_blank">Muaz Khan</a> » <a href="http://twitter.com/muazkh" target="_blank" title="Síguenos en Twitter">@muazkh</a> 
+<footer style="font-size: .8em; text-align: center;"> <a href="https://github.com/manueltato11/e-CTR-server" target="_blank">e-CTR-Server!</a> © <a href="https://plus.google.com/100325991024054712503" rel="author" target="_blank">Muaz Khan</a>, <a href="https://github.com/manueltato11" target="_blank">Manuel Fernando</a> »
+    <a href="http://twitter.com/muazkh" target="_blank" title="Síguenos en Twitter">@muazkh</a>, <a href="http://twitter.com/manueltato11" target="_blank" title="Síguenos en Twitter">@manueltato11</a> 
 </footer>

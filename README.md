@@ -1,16 +1,16 @@
-#### [e-CTR Server - WebSocket over Node.js](https://github.com/manueltato11/e-CTR-server) / [Demo](https://websocket-over-nodejs-manueltato11.c9.io/)
+#### [e-CTR Server - WebSocket para Node.js](https://github.com/manueltato11/e-CTR-server) / [Demo](https://websocket-over-nodejs-manueltato11.c9.io/)
 
-Server del Plugin e-CTR "Comunicación en Tiempo Real" desarrollado con WebSockets Over Node.js el cual tiene las siguientes demostraciones del lado del navegador:
+Servidor del Plugin e-CTR "Comunicación en Tiempo Real" desarrollado con WebSockets para Node.js el cual tiene las siguientes funcionalidades del lado del navegador:
 
-1. Chat de texto usando habitaciones <rooms>
-2. Chat de texto si usar habitaciones <rooms>
-3. WebRTC Peer Connection usando habitaciones <rooms>
+1. Chat de texto usando canales <rooms>
+2. Chat de texto si usar canales <rooms>
+3. WebRTC Peer Connection usando canales <rooms>
 
 Tres archivos node.js:
 
-1. signaler.js - HTTP basado en Websocket para la señalización de servidor junto a la creación de canales WebSocket <channels>, es decir <rooms>.
-2. ssl.js - HTTPs i.e. SSL basado en Websocket para la señalizacion más segura de la conexión, junto a la creacion de canales Websocket <channels>, es decir <rooms>.
-3. simple.js - HTTP basado en Websocket para la señalización sin canales ni habitaciones, es decir NO-room.
+1. signaler.js - Inicializa la señalización del servidor Websocket bajo HTTP creando los canales de comunicación WebSocket. <rooms>.
+2. ssl.js - Inicializa la señalización del servidor Websocket bajo el protocolo HTTPS previa instalación del certificado de seguridad SSL/TLS, crea los canales de comunicación de forma segura entre el cliente y servidor. <channels>, es decir <rooms>.
+3. simple.js - Inicializa la señalización del servidor Websocket bajo el protocolo HTTP sin canales de comunicación, es decir NO-room.
 
 =
 
